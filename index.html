@@ -1,38 +1,49 @@
 <!DOCTYPE html>
     <head>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
         <style>
+           .all {
+                text-align: center;
+            }
             .logo {
                 height: 92px;
                 width: 272px;
             }
-            /*.big-search {
-                height: 35px;
-                width:  500 px;
-                border-width: 5px;
-                border-color: black;
+            .search-box-bar {
+                width: 500px;
+                height: 40px;
+                border: 1px solid rgba(0, 0, 0, 0.2);
                 border-radius: 25px;
-            } 
+            }
+            .search-icon {
+                height: 20px;
+                width: 20px;
+                opacity: 0.2;
+            }
             .small-search {
-                border:none;
-            } */
+                border: none;
+                outline: none;
+            }
             .buttons {
-                margin-top: 20px
+                margin-top: 20px;
+                border-radius: 25px;
             }
         </style>
     </head>
     <body>
-        <div>
+        <div class="all">
             <img class="logo" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="google logo">
         </div>
         <div>
             <form>
-                <!--Add "big-search" to the div element below-->
-                <div >
+                <div class="search-box-bar">
+                    <img class="search-icon" src="images/search_black_24dp.svg">
                     <input class="small-search" type="text">
                 </div>
                 <div class="buttons">
-                    <button type="submit">Google Search</button>
-                    <button type="submit">I'm feeling lucky</button>
+                    <button class="search-google" type="submit">Google Search</button>
+                    <button class="feeling-lucky" type="submit">I'm feeling lucky</button>
                 </div>
             </form>
         </div>
