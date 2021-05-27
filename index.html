@@ -3,49 +3,186 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
         <style>
-           .all {
+            .navbar {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+            .leftnav {
+                float: left
+            }
+            .rightnav {
+                float: right;
+            }
+            .navbar li a {
+                display: block;
+                color: black;
                 text-align: center;
+                font-family: arial, sans-serif;
+                font-size: 14px;
+                text-decoration: none;
+                padding: 5px;
+                margin: 10px 10px;
+            }
+            header .navbar li a:hover {
+                text-decoration: underline;
+            }
+            li .leftnav {
+                float: left
+            }
+            li .rightnav {
+                float: right;
+            }
+            .navbar li a {
+                color: black;
+                font-family: arial, sans-serif;
+                font-size: 14px;
+                text-decoration: none;
+                padding: 5px;
+            }
+            .navbar li a:hover {
+                text-decoration: underline;
+            }
+            .footer {
+                position: fixed;
+                bottom: 0;
+                Width: 100%;
+                background-color: rgb(236, 236, 236);
+            }
+            .leftfooter {
+                float: left;
+                margin: 15px 8px;
+            }
+            .rightfooter {
+                float: right;
+                margin: 15px 8px;
+                
+            }
+            .bottomlist {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+            .bottomlist li a {
+                color:rgb(112, 117, 122);
+                font-family: arial, sans-serif;
+                font-size: 14px;
+                text-decoration: none;
+                padding: 12px;
+            }
+            #signin a {
+                color:white;
+                background-color: rgb(26, 115, 232);
+                border-radius: 4px;
+                padding: 10px 24px;
+            }
+            #signin a:hover {
+                text-decoration: none;
+                background-color: rgb(83, 148, 233);
+            }
+            .top {
+                text-align: center;
+                margin-top: 200px;
             }
             .logo {
                 height: 92px;
                 width: 272px;
             }
+            form {
+               margin: auto;
+                width: 580px;
+            }
             .search-box-bar {
-                width: 500px;
+                width: 570px;
                 height: 40px;
                 border: 1px solid rgba(0, 0, 0, 0.2);
                 border-radius: 25px;
             }
+            .search-box-bar:hover {
+                box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.1)
+            }
             .search-icon {
-                height: 20px;
-                width: 20px;
+                margin-top: 10px;
+                margin-left: 10px;
                 opacity: 0.2;
             }
             .small-search {
                 border: none;
                 outline: none;
             }
-            .buttons {
+            .search-buttons {
+                background-color:rgb(248, 249, 250);
+                border: none;
                 margin-top: 20px;
-                border-radius: 25px;
+                border-radius: 4px;
+                font-size: 14px;
+                font-family: arial,sans-serif;
+                padding: 10px 15px;
+                cursor: pointer;
             }
         </style>
     </head>
-    <body>
-        <div class="all">
+    <body style="margin: 0px;">
+        <header>
+        <ul class="navbar">
+            <li class="leftnav">
+                <a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header">About</a>
+            </li>
+            <li class="leftnav">
+                <a href="https://store.google.com/US/?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US">Store</a>
+            </li>
+            <li class="rightnav" id="signin">
+                <a class="sign-in" href="https://accounts.google.com/ServiceLogin/webreauth?hl=en&passive=true&continue=https%3A%2F%2Fwww.google.com%2F&ec=GAZAmgQ&flowName=GlifWebSignIn&flowEntry=ServiceLogin">Sign in</a>
+            </li>
+            <li class="rightnav">
+                <a href="#"><svg width="20px" height="20px"><path width="16px" height="16px" d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"></path></svg></a>
+            </li>
+            <li class="rightnav">
+                <a href="https://www.google.com/imghp?hl=en&ogbl">Images</a>
+            </li>
+            <li class="rightnav">
+                <a href="https://accounts.google.com/ServiceLogin/webreauth?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F%26ogbl%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin">Gmail</a>
+            </li>
+        </ul>
+    </header>
+        <div class="top">
             <img class="logo" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="google logo">
         </div>
         <div>
             <form>
                 <div class="search-box-bar">
-                    <img class="search-icon" src="images/search_black_24dp.svg">
+                    <img src="images/search_black_24dp.svg" class="search-icon" alt="magifying-glass" width="20px" height="20px">
                     <input class="small-search" type="text">
                 </div>
-                <div class="buttons">
-                    <button class="search-google" type="submit">Google Search</button>
-                    <button class="feeling-lucky" type="submit">I'm feeling lucky</button>
+                <div style="text-align:center">
+                    <button class="search-buttons" type="submit">Google Search</button>
+                    <button class="search-buttons" type="submit">I'm feeling lucky</button>
                 </div>
             </form>
         </div>
+            <div class="footer">
+                <ul class="bottomlist">
+                    <li class="leftfooter">
+                        <a href="#">Advertising</a>
+                    </li>
+                    <li class="leftfooter">
+                        <a href="#">Business</a>
+                    </li>
+                    <li class="leftfooter">
+                        <a href="#">How Search Works</a>
+                    </li>
+                    <li class="rightfooter">
+                        <a href="#">Settings</a>
+                    </li>
+                    <li class="rightfooter">
+                        <a href="#">Terms</a>
+                    </li>
+                    <li class="rightfooter">
+                        <a href="#">Privacy</a>
+                    </li>
+                </ul>
+            </div>
+        </ul>
     </body>
 </html>
